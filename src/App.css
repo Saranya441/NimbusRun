@@ -1,0 +1,154 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #10182a;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+}
+
+.game-container {
+  width: min(100%, 960px);
+  padding: 26px;
+  background: #1c2940;
+  border: 1px solid #34435c;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px #0006;
+}
+
+.game-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.game-heading h1 {
+  margin: 0;
+  font-size: clamp(24px, 4vw, 34px);
+}
+
+.game-heading p {
+  color: #a8b8cf;
+  margin-bottom: 0;
+}
+
+.score-panel {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #a8b8cf;
+}
+
+.score-panel strong {
+  display: block;
+  margin-top: 5px;
+  color: #ffd43b;
+  font-size: 22px;
+}
+
+.canvas-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 16px;
+  background: #65c7f7;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  background: #10182a66;
+}
+
+.game-overlay h2 {
+  font-size: clamp(22px, 4vw, 34px);
+}
+
+.game-overlay p {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #172033;
+  background: #ffd43b;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  background: #ffbd24;
+  transform: translateY(-2px);
+}
+
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.instructions {
+  color: #a8b8cf;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 25px;
+  color: #8998ad;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    padding: 15px;
+  }
+
+  .game-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .game-controls {
+    gap: 8px;
+  }
+
+  .game-controls button {
+    flex: 1;
+    padding: 12px 6px;
+    font-size: 12px;
+  }
+}
